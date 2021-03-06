@@ -7,11 +7,11 @@ struct node {
 };
 
 struct node * create_node() {
-	struct node *tmp = malloc(sizeof(*tmp));
-	tmp->next = NULL;
+	struct node *new_node = malloc(sizeof(*new_node));
+	new_node->next = NULL;
 	printf("Enter the data: ");
-	scanf(" %d", &tmp->data);
-	return tmp;
+	scanf(" %d", &new_node->data);
+	return new_node;
 }
 
 void print_linked_list(struct node *head) {
@@ -52,7 +52,7 @@ void delete_at_beg(struct node **indirect) {
 
 void delete_at_end(struct node **indirect) {
 	if(*indirect == NULL ) {
-		printf(\n"List is empty!!!\n\n");
+		printf("\nList is empty!!!\n\n");
 		return;
 	}
 	
